@@ -1,7 +1,9 @@
-@extends('layouts.appnew')
+@extends('layouts.Dashboard')
 
 @section('content')
+
     <div class="container">
+        <br><br>
         <h1>نموذج تسليم الجهاز</h1>
         <form id="handoverForm">
             <label for="recipientName">اسم المستلم:</label>

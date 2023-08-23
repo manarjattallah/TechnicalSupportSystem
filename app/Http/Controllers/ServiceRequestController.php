@@ -51,4 +51,9 @@ public function evaluation()
 {
     return view('evaluation');
 }
+
+public function Dashboard()
+{
+    return view('layouts.Dashboard');
+}
 }

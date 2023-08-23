@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -10,6 +11,11 @@
 
 
             body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -53,6 +59,7 @@
             height: auto;
             width: auto;
         }
+
         </style>
 </head>
 <body class="antialiased">

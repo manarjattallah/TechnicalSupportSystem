@@ -1,7 +1,9 @@
-@extends('layouts.appnew')
+@extends('layouts.Dashboard')
 
 @section('content')
+
     <div class="container">
+        <br><br>
         <h1>خدمة طلب الدعم الفني</h1>
         <form method="POST" action="/request-support">
             @csrf
@@ -19,6 +21,7 @@
     <input type="file" name="attachment">
             <button type="submit">تقديم الطلب</button>
         </form>
+        <div id="success-message" style="display: none;">تم تقديم الطلب بنجاح.</div>
         @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
         @endif
@@ -32,5 +35,28 @@
         </div>
         @endif
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('submit-form');
+            var successMessage = document.getElementById('success-message');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Simulate form submission logic here, e.g., sending data to the server
+
+                // Once the form submission is successful (simulated here),
+                // show the success message and reset the form
+                successMessage.style.display = 'block';
+                form.reset();
+
+                // Hide the success message after 3 seconds
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            });
+        });
+        </script>
+
 @endsection
 

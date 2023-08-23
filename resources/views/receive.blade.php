@@ -1,9 +1,11 @@
-@extends('layouts.appnew')
+@extends('layouts.Dashboard')
 
 @section('content')
+
     <title>استلام طلب الصيانة</title>
 
     <div class="container">
+        <br><br>
         <h1>استلام طلب الصيانة</h1>
         <form id="maintenanceForm">
             <label for="personInCharge">المكلف بالصيانة:</label>
@@ -14,7 +16,7 @@
 <input type="checkbox" name="placeOfMaintenance[]" value="external"> خارجي
 
             <label for="timeOfReceipt">وقت الاستلام:</label>
-            <input type="text" name="timeOfReceipt" required>
+            <input type="date" name="timeOfReceipt" required>
             <label for="recipient">المستلم:</label>
             <input type="text" name="recipient" required>
             <label for="receivingDevice">الجهاز المستلم:</label>
@@ -44,10 +46,12 @@
                 <!-- Table rows will be added dynamically -->
             </tbody>
         </table>
+
     </div>
 
     <script>
         function addData() {
+            console.log("addData function invoked"); 
     const form = document.getElementById('maintenanceForm');
     const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
 
@@ -75,5 +79,6 @@
 }
 
     </script>
+
 
 @endsection

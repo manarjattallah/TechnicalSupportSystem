@@ -1,4 +1,4 @@
-@extends('layouts.appnew')
+@extends('layouts.Dashboard')
 
 @section('content')
 <!DOCTYPE html>
@@ -77,7 +77,9 @@
     </style>
 </head>
 <body>
+    <div class="container">
     <div class="py-3">
+        <br><br>
         <h1>قطع الغيار المستخدمة</h1>
         <form action="" method="post">
             <div class="mb-3">
@@ -105,13 +107,8 @@
             <div class="button">
                 <button type="submit">احفظ</button>
             </div>
-        </form>
-    </div>
-</body>
-</html>
 
-
-<div class="py-5">
+<br><br>
 <table class="table">
   <thead>
     <tr>
@@ -132,6 +129,12 @@
 
   </tbody>
 </table>
+
+</form>
 </div>
+</div>
+</body>
+</html>
+
 
 @endsection

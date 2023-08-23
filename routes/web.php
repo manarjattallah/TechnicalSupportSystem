@@ -26,7 +26,7 @@ Route::get('/handing', [ServiceRequestController::class, 'handing']);
 Route::get('/query-requests', [QueryController::class , 'queryRequests']);
 Route::get('/evaluation', [ServiceRequestController::class, 'evaluation']);
 Route::get('/SpareParts', [ServiceRequestController::class , 'SpareParts']);
-
+Route::get('/Dashboard', [ServiceRequestController::class , 'Dashboard']);
 
 Auth::routes();
 

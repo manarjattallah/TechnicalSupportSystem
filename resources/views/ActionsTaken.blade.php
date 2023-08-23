@@ -1,9 +1,11 @@
-@extends('layouts.appnew')
+@extends('layouts.Dashboard')
 
 @section('content')
+\
     <title>Actions Taken Interface</title>
 
     <div class="container">
+<br><br>
         <h1>الاجراءات المتخذة ضمن عملية الصيانة</h1>
         <form id="actionsForm">
 

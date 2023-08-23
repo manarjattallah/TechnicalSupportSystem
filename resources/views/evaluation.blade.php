@@ -1,4 +1,4 @@
-@extends('layouts.appnew')
+@extends('layouts.Dashboard')
 
 @section('content')
 
@@ -75,7 +75,10 @@
     </style>
 </head>
 <body>
+    <br><br>
+    <div class="container">
     <h1>تقييم</h1>
+
     <div class="rating">
         <input type="radio" id="star5" name="rating" value="5">
         <label for="star5"></label>
@@ -91,13 +94,19 @@
     <div class="comments">
         <label for="comment">الملاحظات</label><br>
         <textarea name="comment" id="comment"></textarea>
+        <br><br>
+        <label for="evaluator">مقيم الانجاز:</label>
+        <input type="text" name="evaluator" required>
+         <label for="timeOfevaluat">تاريخ التقييم:</label>
+            <input type="date" name="timeOfevaluat" required>
+
     </div>
     <div class="button">
         <button type="submit">إرسال</button>
     </div><br>
 
 
-    <div class="py-5">
+
         <table>
             <thead>
                 <tr>
