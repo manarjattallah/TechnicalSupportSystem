@@ -9,16 +9,16 @@
         <h1>استلام طلب الصيانة</h1>
         <form id="maintenanceForm">
             <label for="personInCharge">المكلف بالصيانة:</label>
-            <input type="text" name="personInCharge" required>
+            <input type="text" name="personInCharge"  id="personInCharge" required>
             <label>مكان الصيانة:</label>
-<input type="checkbox" name="placeOfMaintenance[]" value="samePlace"> نفس المكان
-<input type="checkbox" name="placeOfMaintenance[]" value="workshop"> الورشة
-<input type="checkbox" name="placeOfMaintenance[]" value="external"> خارجي
+<input type="checkbox" name="placeOfMaintenance[]" value="samePlace"  id="samePlace"> نفس المكان
+<input type="checkbox" name="placeOfMaintenance[]" value="workshop" id="workshop"> الورشة
+<input type="checkbox" name="placeOfMaintenance[]" value="external" id="external"> خارجي
 
             <label for="timeOfReceipt">وقت الاستلام:</label>
-            <input type="date" name="timeOfReceipt" required>
+            <input type="date" name="timeOfReceipt" id="timeOfReceipt"  required>
             <label for="recipient">المستلم:</label>
-            <input type="text" name="recipient" required>
+            <input type="text" name="recipient" id="recipient" required>
             <label for="receivingDevice">الجهاز المستلم:</label>
             <input type="text" name="receivingDevice" required>
             <label for="priority">اولوية الصيانة:</label>
@@ -51,7 +51,7 @@
 
     <script>
         function addData() {
-            console.log("addData function invoked"); 
+            console.log("addData function invoked");
     const form = document.getElementById('maintenanceForm');
     const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
 

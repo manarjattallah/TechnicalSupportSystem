@@ -7,11 +7,12 @@
         <h1>نموذج تسليم الجهاز</h1>
         <form id="handoverForm">
             <label for="recipientName">اسم المستلم:</label>
-            <input type="text" name="recipientName" required>
+            <input type="text" name="recipientName"  id="recipientName"required>
             <label for="receiptDate">تاريخ الاستلام:</label>
-            <input type="date" name="receiptDate" required>
+            <input type="date" name="receiptDate" id="receiptDate" required>
+
             <label for="receiptPlace">مكان الاستلام:</label>
-            <input type="text" name="receiptPlace" required>
+            <input type="text" name="receiptPlace" id="receiptPlace"  required>
 
             <button type="button" onclick="addHandover()"> + </button>
             <br><br>
@@ -35,11 +36,14 @@
             const form = document.getElementById('handoverForm');
             const table = document.getElementById('handoverTable').getElementsByTagName('tbody')[0];
 
-            const recipientName = form.recipientName.value;
-            const receiptDate = form.receiptDate.value;
-            const receiptPlace = form.receiptPlace.value;
+            const recipientName = document.getElementById('recipientName').value;
+            const receiptDate = document.getElementById('receiptDate').value;
+            const receiptPlace=  document.getElementById('receiptPlace').value;
+
+
 
             const newRow = table.insertRow(table.rows.length);
+            alert(table.rows.length);
             const cell1 = newRow.insertCell(0);
             const cell2 = newRow.insertCell(1);
             const cell3 = newRow.insertCell(2);
